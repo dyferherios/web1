@@ -18,16 +18,23 @@ body{
     width: 100%;
     height: 300vh;
 } 
+/*
+This is the header style
+====================start header style=======================================
+*/
 header{
     position:fixed;
     width: 100%;
     top: 0;
+    z-index: 2;
 }
 nav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 5vh 5vh 0vh 5vh;
+    background-color: var(--color-black);
+    
 }
 .logo-name{
     width: 10%;
@@ -35,7 +42,7 @@ nav{
     flex-direction: row;
     justify-content: space-between;
 }
-.logo-name figure img{
+.logo-name figure a img{
     margin-top: -3vh;
     width: 10vh;
     height: 10vh;
@@ -97,79 +104,110 @@ nav{
 #contact-menu a{
     color: var(--color-yellow-orange);
 }
-#icon-menu a img{
+#icon-menu img{
     display: none;
 }
 
+/*
+=============================End header style================================
+*/
+
+/*
+This is the main style
+*/
 main{
     width: 100%;
     height: 280vh;
     margin-top: 12.5vh;
 }
+section{
+    margin-left: 10%;
+}
 
+/*
+===============================Start section for home========================
+*/
 #section-home{
-    width: 100%;
+    width: 80%;
     height: 80vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: black;
+    border: 1px solid white;
 }
 #section-home article{
     width: 50%;
-    border: 1px solid white;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 } 
-#home-article-div-text{
-
-    gap: 4vh;
+#home-article-text #home-article-div-text{
+    width: 80%;
+    height:70%;
+    padding-top: 25%;
+    line-height: 1.5;
 }
-#home-article-div-text h2{
+#home-article-text #home-article-div-text h2{
     font-size: 5vh;
 }
-#home-article-div-text h1{
+#home-article-text #home-article-div-text p{
+    font-size: 2vh;
+}
+#home-article-text #home-article-div-text h1{
     font-size: 10vh;
 }
-#home-article-text .button-start{
-    width: 15%;
-    margin-top: 10vh;
+#home-article-text #home-article-div-btn{
+    width: 80%;
+    height: 30%;
+    padding-top: 5%;
+}
+
+#home-article-text #home-article-div-btn .button-start{
+    width: 40%;
     padding: 2vh;
     background-color: var(--color-yellow-orange); 
     border: none;
     border-radius: 2vh;
 } 
-#home-article-text .button-start a{
+#home-article-text #home-article-div-btn .button-start a{
     text-decoration: none;
     color: var(--color-white);
     font-size: 3vh;
 }
-#home-article-text .button-start:hover{
-    cursor: pointer;
-    transform: scale(1.01);
-    padding: 3vh;
+#home-article-text #home-article-div-btn .button-start:hover{
+    margin-left: 2vh;
+    transform: scale(1.2);
     background-color: var(--color-yellow-orange); 
 }
-#home-article-text .button-start:hover a{
+#home-article-text #home-article-div-btn .button-start:hover a{
    letter-spacing: 2px;
 }
-
-
-/* #section-about-us{
+#section-home #home-article-image figure img{
     width: 100%;
-    height: 80vh;
-    background-color: rgb(226, 0, 0);
-    margin-top: 12.5vh;
+    height: 100%;
+    object-fit: contain;
 }
-#section-booking{
-    width: 100%;
-    height: 80vh;
-    background-color: rgb(70, 227, 13);
-} */
+/*
+===========================End section for home==============================
+*/
 
+@media screen and (max-width: 412px) {
+    /*
+    =====================start nav-bar=======================================
+    */
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav-menu{
+        width: 15%;
+    }
+    .logo-name{
+        width: 60%;
 
-@media screen and (max-width: 700px) {
+    }
     .list-menu {
         display: none;
         position: absolute;
@@ -179,14 +217,12 @@ main{
         background-color: rgba(64, 63, 63, 0.5);
         text-align: center;
     }
-    #icon-menu a img{
+    #icon-menu img{
         display: block;
     }
-    #icon-menu a img {
+    #icon-menu img {
         width: 4vh; 
         height: 4vh;
-        margin-top: 1vh;
-        margin-left: 40vw;
     }
 
     #icon-menu:hover .list-menu {
@@ -218,4 +254,57 @@ main{
     #contact-menu:hover::before, #home-menu:hover::before{
         width: 100%;
     }
+    /*
+    =================================End nav-bar=============================
+    */
+
+    /*
+    =================================Start section home======================
+    */
+    #section-home{
+        padding: 0;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #section-home article{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    } 
+    #section-home #home-article-text{
+        height: 70%;
+    }
+    #home-article-text #home-article-div-text{
+        padding-top: 10%;
+        width: 100%;
+    }
+    #home-article-text #home-article-div-btn{
+        width: 100%;
+        height: 30%;
+        padding-top: 10%;
+        text-align: center;
+    }
+    #home-article-text #home-article-div-btn .button-start{
+        width: 70%;
+        padding: 1vh;
+        background-color: var(--color-yellow-orange); 
+        border: none;
+        border-radius: 1vh;
+    } 
+    #home-article-text #home-article-div-btn .button-start:hover{
+        transform: scale(1.2);
+        background-color: var(--color-yellow-orange); 
+    }
+    #home-article-text #home-article-div-btn .button-start:hover a{
+       letter-spacing: 2px;
+    }
+    #section-home #home-article-image{
+        height: 30%;
+    }
+    /*
+    ===================================End section home======================
+    */
 }
