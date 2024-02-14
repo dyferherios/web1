@@ -8,8 +8,9 @@
 :root{
     --color-black : rgb(2, 2, 2);
     --color-yellow : yellow;
-    --color-yellow-orange : rgb(242, 157, 0);
+    --color-yellow-orange : rgb(251, 128, 6);
     --color-white : white;
+    --color-grey : rgb(45, 42, 42);
 }
 
 body{
@@ -31,8 +32,8 @@ header{
 nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 5vh 5vh 0vh 5vh;
+    justify-content: space-between;
+    padding: 5vh 0vh 0vh 5vh;
     background-color: var(--color-black);
     
 }
@@ -120,20 +121,16 @@ main{
     height: 280vh;
     margin-top: 12.5vh;
 }
-section{
-    margin-left: 10%;
-}
 
 /*
-===============================Start section for home========================
+===============================Start section for section home========================
 */
 #section-home{
-    width: 80%;
-    height: 80vh;
+    width: 90%;
+    height: 90vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 1px solid white;
 }
 #section-home article{
     width: 50%;
@@ -190,6 +187,28 @@ section{
 }
 /*
 ===========================End section for home==============================
+*/
+
+
+/*
+===========================Start section about us===========================
+*/
+#section-about-us{
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(63, 63, 63);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#section-about-us article{
+    width: 45%;
+    border: 1px solid white;
+    display: inherit;
+}
+
+/*
+===========================End section about us=============================
 */
 
 @media screen and (max-width: 412px) {
@@ -263,6 +282,7 @@ section{
     */
     #section-home{
         padding: 0;
+        margin-left: 5%;
         height: 80vh;
         display: flex;
         flex-direction: column;
