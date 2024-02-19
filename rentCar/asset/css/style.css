@@ -17,7 +17,6 @@ body{
     color: white;
     background-color: var(--color-black);
     width: 100%;
-    height: 300vh;
 } 
 /*
 This is the header style
@@ -29,7 +28,7 @@ header{
     top: 0;
     z-index: 2;
 }
-nav{
+header nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -116,18 +115,17 @@ nav{
 /*
 This is the main style
 */
-main{
+#main-home{
     width: 100%;
-    height: 280vh;
-    margin-top: 12.5vh;
+    height: 180vh;
 }
 
 /*
 ===============================Start section for section home========================
 */
 #section-home{
-    width: 90%;
-    height: 90vh;
+    width: 100%;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -141,7 +139,7 @@ main{
 } 
 #home-article-text #home-article-div-text{
     width: 80%;
-    height:70%;
+    height:60%;
     padding-top: 25%;
     line-height: 1.5;
 }
@@ -156,8 +154,8 @@ main{
 }
 #home-article-text #home-article-div-btn{
     width: 80%;
-    height: 30%;
-    padding-top: 5%;
+    height: 40%;
+    padding-top: 10%;
 }
 
 #home-article-text #home-article-div-btn .button-start{
@@ -166,20 +164,22 @@ main{
     background-color: var(--color-yellow-orange); 
     border: none;
     border-radius: 2vh;
+    transition: transform 2s;
 } 
 #home-article-text #home-article-div-btn .button-start a{
     text-decoration: none;
     color: var(--color-white);
     font-size: 3vh;
+    transition: transform 2s;
 }
 #home-article-text #home-article-div-btn .button-start:hover{
-    margin-left: 2vh;
     transform: scale(1.2);
     background-color: var(--color-yellow-orange); 
 }
 #home-article-text #home-article-div-btn .button-start:hover a{
    letter-spacing: 2px;
 }
+
 #section-home #home-article-image figure img{
     width: 100%;
     height: 100%;
@@ -189,43 +189,383 @@ main{
 ===========================End section for home==============================
 */
 
-
 /*
-===========================Start section about us===========================
+===========================Start section advantage===========================
 */
-#section-about-us{
+#section-advantage{
+    text-align: center;
+    padding: 0% 5%;
+}
+#section-advantage h1{
+    font-size: 5vh;
+}
+#section-advantage article{
+    margin-top: 10vh;
     width: 100%;
-    height: 90vh;
-    background-color: rgb(63, 63, 63);
+    height: 70vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-#section-about-us article{
-    width: 45%;
+.div-advantage{
+    width: 30%;
+    height: 100%;
+    border-radius: 2vh;
+    display: flex;
+    padding-top: 5vh;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    padding: 5vh;
+    border: 0.5px solid white;
+    transition: 1s;
+}
+.div-advantage:hover{
+    box-shadow: 2px 2px 5px 5px rgb(129, 127, 127);
+    width: 32%;
+    height: 102%;
+}
+.logo-advantage{
+    background-color: var(--color-yellow-orange);
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+}
+.div-advantage h2{
+    margin: 5vh 0vh;
+}
+.div-advantage p{
+    font-size: 2vh;
+}
+#yellow-div-advantage{
+    color: var(--color-black);
+    background-color: var(--color-yellow-orange);
+}
+#yellow-logo-advantage{
+    background-color: var(--color-black);
+}
+.animation{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.rectangle{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 2vw;
+    background-color: var(--color-yellow-orange);
+    position: relative;
+    opacity: 0.3;
+}
+#rectangle-0{
+    animation: moveUpDown0 6s infinite linear;
+}
+#rectangle-1-0{
+    animation: moveUpDown1-0 8s infinite linear;
+}
+#rectangle-1-1{
+    position: absolute;
+    margin-left: 45%;
+    animation: moveUpDown1-1 8s infinite linear;
+}
+
+#rectangle-2{
+    animation: moveUpDown2 6s infinite linear;
+}
+@keyframes moveUpDown0 {
+    0% {
+        top: 150vh;
+        transform: rotate(360deg);
+    }
+    100% {
+        top: -50vh;
+    }
+}
+@keyframes moveUpDown1-0 {
+    0% {
+        top: 120vh;
+        transform:rotate(180deg) scale(0.5, 0.5);
+
+    }
+    20%{
+        transform:scale(1.1);
+    }
+    40%{
+        transform:scale(0.5, 0.5);
+    }
+    50%{
+        transform:scale(0, 0);
+    }
+    80%{
+        transform:scale(1, 1);
+        clip-path: polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%);
+    }
+    100% {
+        top: -50vh;
+        transform:scale(1, 1);
+    }
+}
+@keyframes moveUpDown1-1 {
+    0% {
+        top: -50vh;
+        transform:rotate(180deg) scale(0.5, 0.5);
+    }
+    20%{
+        transform:scale(1.1);
+    }
+    40%{
+        transform:scale(0.5, 0.5);
+    }
+    50%{
+        transform:scale(0, 0);
+    }
+    80%{
+        transform:scale(1, 1);
+        clip-path: polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%);
+    }
+    100% {
+        top: 120vh;
+        transform:scale(1, 1);
+    }
+}
+
+@keyframes moveUpDown2 {
+    0% {
+        top: 200vh;
+        transform: rotate(360deg);
+    }
+    100% {
+        top: -50vh;
+    }
+}
+
+
+/*
+===========================End section advantage================================
+/*
+==========================Start section cars===================================
+*/
+#main-cars{
+    width: 100%;
+    height: 240vh;
+}
+.section-cars{
+    margin-top: 12.5vh;
+    width: 100%;
+    height: 220vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carousel {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel figure{
+    display: flex;
+    width: 100%;
+    height: 50vw;
+    animation: carouselAnimation 5s alternate infinite; 
+}
+
+.carousel figure img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes carouselAnimation {
+    0% {
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.section-cars h1{
+    margin: 5vh 0vh 0vh 0vh;
+}
+.section-cars h2{
+    margin: 5vh;
+}
+.section-cars .all-cars{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.section-cars .all-cars .div-cars{
+    width: 50vw;
+    height: 60vh;
     border: 1px solid white;
-    display: inherit;
+    background-color: var(--color-yellow-orange);
+    clip-path: polygon(0vw 0vh, 0vw 60vh, 40vw 30vh, 60vw 0vh);
+
+}   
+.car-description{
+    border: 10px solid white;
+    background-color: rgb(16, 102, 177) !important;
+    clip-path: polygon(60vw 0vh, 20% 0%, 0% 100%, 100% 50%, 100% 10%) !important;
 }
 
 /*
-===========================End section about us=============================
+==========================End section cars===================================
 */
+
+/*
+==========================Start section about us============================
+*/
+#main-about-us{
+    margin-top: 12.5vh;
+    width: 100%;
+    height: 120vh;
+}
+#main-about-us .about-us{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#main-about-us article{
+    margin-top: 10vh;
+    width: 45vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: inherit;
+    border: 1px solid white; 
+    justify-content: space-around;
+}
+#main-about-us article aside{
+    width: 20vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#aside-right-block{
+    margin-top: 10vh;
+}
+#main-about-us article aside .div-profil{
+    width: 100%;
+    height: 48%;
+}
+#operations-director{
+    background-color: var(--color-yellow-orange);
+    color: black;
+}
+#Chief-financial-officer-director{
+    background-color: rgb(77, 76, 76);
+    color: white;
+}
+#marketing-director{
+    background-color: rgb(98, 41, 10);
+    color: white;
+}
+#human-ressources-director{
+    background-color: rgb(249, 246, 101);
+    color: black;
+}
+.profil-photo{
+    width: 100%;
+    height: 70%;
+    border: 1px solid white; 
+}
+.profil-description{
+    width: 100%;
+    height: 30%;
+    border: 1px solid white; 
+    text-align: center;
+    padding-top: 2vh;
+    line-height: 1.5;
+}
+/*
+==========================End section about us=============================
+*/
+
+/*
+===========================Start footer===========================
+*/
+footer{
+    width: 100%;
+    height: 10vh;
+}
+footer nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.all-menu{
+    width: 50%;
+    display: inherit;
+    justify-content: end;
+}
+.all-menu ul{ 
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.all-menu ul li{
+    list-style: none;
+}
+.all-menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+.account{
+    width: 20%;
+}
+.account figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.account figure img{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    margin-top: -2vh;
+}
+/*
+===========================End footer================================
+*/
+
+
 
 @media screen and (max-width: 412px) {
     /*
     =====================start nav-bar=======================================
     */
+    body{
+        margin-top: 15vh;
+    }
     nav{
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
     .nav-menu{
-        width: 15%;
+        width: 10%;
     }
     .logo-name{
         width: 60%;
-
     }
     .list-menu {
         display: none;
@@ -276,13 +616,16 @@ main{
     /*
     =================================End nav-bar=============================
     */
-
+   
     /*
     =================================Start section home======================
     */
+    main{
+        width: 100%;
+        height: 400vh;
+    }
     #section-home{
         padding: 0;
-        margin-left: 5%;
         height: 80vh;
         display: flex;
         flex-direction: column;
@@ -296,6 +639,7 @@ main{
     } 
     #section-home #home-article-text{
         height: 70%;
+        padding-left: 5%;
     }
     #home-article-text #home-article-div-text{
         padding-top: 10%;
@@ -323,8 +667,32 @@ main{
     }
     #section-home #home-article-image{
         height: 30%;
-    }
+    } 
     /*
     ===================================End section home======================
+    */ 
+    /*
+    )=================================Start section advantage================
+    */
+
+    #section-advantage{
+        margin-top: 10vh;
+        width: 100%;
+        height: 260vh;
+    }
+    #section-advantage article{
+        padding: 0;
+        height: 230vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .div-advantage{
+        width: 100%;
+        height: 70vh;
+    }
+
+    /*
+    )=================================End section advantage==================
     */
 }
