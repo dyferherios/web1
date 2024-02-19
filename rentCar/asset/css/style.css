@@ -231,6 +231,11 @@ This is the main style
     height: 20vh;
     border-radius: 50%;
 }
+.logo-advantage img{
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+}
 .div-advantage h2{
     margin: 5vh 0vh;
 }
@@ -404,25 +409,70 @@ This is the main style
     margin: 5vh;
 }
 .section-cars .all-cars{
-    width: 80%;
+    width: 90vw;
     height: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+
 }
-.section-cars .all-cars .div-cars{
-    width: 50vw;
+.form-reservation{
+    width: 30%;
     height: 60vh;
-    border: 1px solid white;
-    background-color: var(--color-yellow-orange);
-    clip-path: polygon(0vw 0vh, 0vw 60vh, 40vw 30vh, 60vw 0vh);
-
-}   
-.car-description{
-    border: 10px solid white;
-    background-color: rgb(16, 102, 177) !important;
-    clip-path: polygon(60vw 0vh, 20% 0%, 0% 100%, 100% 50%, 100% 10%) !important;
+    border: 1px solid var(--color-yellow-orange);
+    position: sticky;
+    top: 12.5vh;
+    border-radius: 2vh;
 }
-
+.form-reservation form {
+    padding: 0vh 0vh 0vh 2vh;
+}
+.form-reservation form div{
+    margin: 2vh 0vh;
+    width: 90%;
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.form-reservation form div input{
+    height: 4vh;
+    border: 1px solid white;
+    border-radius: 0.5vh;
+    background-color: transparent;
+    color: var(--color-yellow-orange);
+}
+#btn-reserve{
+    width: 15vw;
+    height: 7vh;
+    margin-left: 4vw;
+    background-color: var(--color-yellow-orange);
+    border-radius: 1vh;
+    border: none;
+    opacity: 0.7;
+    font-size: 3vh;
+    transition: 2s;
+}
+#btn-reserve:hover{
+    opacity: 1;
+    font-size: 3.5vh;
+    transform: scale(1.2, 1.2);
+}
+.car-description{
+    width: 65%;
+    height: 160vh;
+    border: 1px solid white;
+}
+.its-car{
+    width: 100%;
+    height: 20vh;
+    border: 1px solid rgb(222, 20, 20);
+}
+.its-car figure img{
+    width: 40%;
+    height: 20vh;
+    object-fit: contain;
+}
 /*
 ==========================End section cars===================================
 */
@@ -436,11 +486,23 @@ This is the main style
     height: 120vh;
 }
 #main-about-us .about-us{
+    margin-top: 60vh;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+#about-us-intro{
+    position: absolute;
+    margin-top: -40vh;
+    width: 90%;
+    height: 40vh;
+    border: 1px solid white;
+    line-height: 2;
+}
+#about-us-intro h1{
+    color: var(--color-yellow-orange);
 }
 #main-about-us article{
     margin-top: 10vh;
@@ -448,51 +510,136 @@ This is the main style
     height: 100vh;
     display: flex;
     flex-direction: inherit;
-    border: 1px solid white; 
     justify-content: space-around;
 }
-#main-about-us article aside{
+#main-about-us article .block-porfil{
     width: 20vw;
-    height: 90vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 #aside-right-block{
-    margin-top: 10vh;
+    margin-top: 8vh;
 }
-#main-about-us article aside .div-profil{
+#main-about-us article .block-porfil.div-profil{
     width: 100%;
     height: 48%;
 }
 #operations-director{
     background-color: var(--color-yellow-orange);
     color: black;
+    border-radius: 2vh;
 }
 #Chief-financial-officer-director{
     background-color: rgb(77, 76, 76);
     color: white;
+    border-radius: 2vh;
 }
 #marketing-director{
     background-color: rgb(98, 41, 10);
     color: white;
+    border-radius: 2vh;
 }
 #human-ressources-director{
     background-color: rgb(249, 246, 101);
     color: black;
+    border-radius: 2vh;
 }
 .profil-photo{
     width: 100%;
-    height: 70%;
-    border: 1px solid white; 
+    height: 65%;
+    border-radius: 2vh;
+}
+.profil-photo figure img{
+    width: 20vw;
+    height: 30vh;
+    border-radius: 2vh 2vh 0vh 0vh;
 }
 .profil-description{
     width: 100%;
-    height: 30%;
-    border: 1px solid white; 
+    height: 35%;
     text-align: center;
-    padding-top: 2vh;
-    line-height: 1.5;
+    padding-top: 4vh;
+}
+.profil-description h1{
+    margin: 1vh 0 1vh 0;
+}
+.form-join-us{
+    border: 1px solid rgb(245, 144, 3); 
+    border-radius: 2vh;
+}
+.form-join-us h1{
+    font-size: 6vh;
+    margin-top: 2vh;
+    text-align: center;
+}
+.form-join-us h1 span{
+    color: var(--color-yellow-orange);
+}
+.form-join-us form{
+    width: 100%;
+    padding-left: 2vh;
+}
+.form-join-us form aside{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+.form-join-us form aside .label-input{
+    margin-top: 3vh;
+    width: 21vw;
+    height: 12vh;
+    line-height: 2;
+}
+
+.form-join-us .label-input .input-champ{
+    background-color: transparent;
+    width: 20vw;
+    height: 5vh;
+    color: white;
+    padding-left: 1vh;
+    border: none;
+    /* box-shadow: 1px 1px 1px 1px rgb(255, 163, 15); */
+    border-radius: 0.5vh;
+    border: 1px solid white;
+}
+#label-input-gender div{
+    height: 5vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* box-shadow: 1px 1px 1px 1px rgb(255, 163, 15); */
+    border-radius: 0.5vh;
+    border: 1px solid white;
+}
+#question-input{
+    margin: 2vh 0vh 0vh 0vh;
+    width: 43vw;
+    height: 10vh;
+    color: white;
+    border-radius: 0.5vh;
+    border: 1px solid white;
+    background-color: transparent;
+}
+.form-join-us form button{
+    width: 15vw;
+    height: 7vh;
+    margin-top: 5vh;
+    margin-left: 4vw;
+    background-color: var(--color-yellow-orange);
+    border-radius: 1vh;
+    border: none;
+    opacity: 0.7;
+    font-size: 3vh;
+    transition: 2s;
+}
+.form-join-us form button:hover{
+    opacity: 1;
+    font-size: 3.5vh;
+    transform: scale(1.2, 1.2);
 }
 /*
 ==========================End section about us=============================
@@ -503,7 +650,7 @@ This is the main style
 */
 footer{
     width: 100%;
-    height: 10vh;
+    height: 20vh;
 }
 footer nav{
     display: flex;
@@ -542,6 +689,7 @@ footer nav{
     border-radius: 50%;
     margin-top: -2vh;
 }
+
 /*
 ===========================End footer================================
 */
@@ -620,7 +768,7 @@ footer nav{
     /*
     =================================Start section home======================
     */
-    main{
+    #main-home{
         width: 100%;
         height: 400vh;
     }
@@ -644,6 +792,7 @@ footer nav{
     #home-article-text #home-article-div-text{
         padding-top: 10%;
         width: 100%;
+        text-align: center;
     }
     #home-article-text #home-article-div-btn{
         width: 100%;
@@ -691,8 +840,132 @@ footer nav{
         width: 100%;
         height: 70vh;
     }
-
+    .div-advantage:hover{
+        width: 100%;
+        height: 72vh;
+    }
     /*
     )=================================End section advantage==================
     */
+     /*
+    ===================================Start about us========================
+    */
+    #main-about-us{
+        width: 100%;
+        height: 360vh;
+        margin-bottom: 10vh;
+    }
+    #about-us-intro{
+        top: 60vh;
+        font-size: 2vh;
+        margin-left: 5%;
+    }
+    #main-about-us .about-us{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    #main-about-us .about-us article{
+        margin-left: 5%;
+        width: 90vw;
+        height: 180vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #main-about-us .about-us article aside{
+        width: 80vw;
+        height: 100vh;
+    }
+    #aside-right-block{
+        margin-top: 4vh;
+    }
+    .div-profil .profil-photo figure img {
+        width: 100%;
+    }
+    .form-join-us{
+        width: 40vw;
+        height: 150vh !important;
+        border: 1px solid var(--color-yellow-orange);
+    }
+    .form-join-us form aside{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 5vh;
+    }
+    .form-join-us form aside .label-input{
+        width: 90%;
+        margin-left: 2vh;
+        /* border: 1px solid white; */
+    }
+    .form-join-us form aside .label-input .input-champ{
+        width: 90%;
+    }
+    #label-input-gender div{
+        width: 90%;
+        border: 1px solid white !important;
+    }
+    #question-label{
+        margin-left: 2vh;
+    }
+    #question-input{
+        margin-left: 2vh;
+        width: 90%;
+    }
+    .form-join-us form button{
+        width: 40%;
+    }
+    /*
+    ===================================End about us==========================
+    */
+    
+    /*
+    ==================================Start footer===========================
+    */
+    footer {
+        width: 80vw;
+        height: 40vh;
+        margin-left: 10vw;
+    }
+    footer nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer nav .logo-name{
+        width: 60%;
+        height: 5vh;
+    }
+    footer nav .all-menu{
+       width: 90%;
+       padding: 2vh 0vh;
+       margin-top: 5vh;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+    }
+    footer nav .all-menu ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+     }
+    footer nav .account {
+       width: 60%;
+       padding-top: 2vh;
+       margin-top: 5vh;
+    }
+    footer nav .account figure{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /*
+    ==================================End footer=============================
+    */
+
+   
 }

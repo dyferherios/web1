@@ -47,11 +47,18 @@
         </div>
     
         <section class="about-us">
+            <div id="about-us-intro">
+                <h1 >Who we are ?</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, porro recusandae! Praesentium animi et tempore corrupti quos harum ad temporibus sapiente ex dolore cumque, delectus dicta qui aut illum. Minima.</p>
+            </div>
+            
             <article>
-                <aside id="aside-left-block">
+                <aside id="aside-left-block" class="block-porfil">
                     <div class="div-profil" id="operations-director">
                         <div class="profil-photo">
-                            
+                            <figure>
+                                <img src="asset/image/DO.jpg" alt="">
+                            </figure>
                         </div>
                         <div class="profil-description">
                             <h1>Operations Director</h1>
@@ -60,7 +67,9 @@
                     </div>
                     <div class="div-profil" id="Chief-financial-officer-director">
                         <div class="profil-photo">
-
+                            <figure>
+                                <img src="asset/image/DF.jpg" alt="">
+                            </figure>
                         </div>
                         <div class="profil-description">
                             <h1>Chief Financial Officer Director</h1>
@@ -68,10 +77,12 @@
                         </div>
                     </div>
                 </aside>
-                <aside id="aside-right-block">
+                <aside id="aside-right-block"  class="block-porfil">
                     <div class="div-profil" id="marketing-director">
                         <div class="profil-photo">
-
+                            <figure>
+                                <img src="asset/image/DM.jpg" alt="">
+                            </figure>
                         </div>
                         <div class="profil-description ">
                             <h1>Marketing Director</h1>
@@ -80,7 +91,9 @@
                     </div>
                     <div class="div-profil" id="human-ressources-director">
                         <div class="profil-photo">
-
+                            <figure>
+                                <img src="asset/image/RH.jpg" alt="">
+                            </figure>
                         </div>
                         <div class="profil-description">
                             <h1>Human Ressources Director</h1>
@@ -89,8 +102,52 @@
                     </div>
                 </aside>
             </article>
-            <article class="form">
-                
+            <article class="form-join-us">
+                <form action="">
+                    <h1><span>Join</span> US</h1>
+                    <aside>
+                        <div class="label-input">
+                            <label for="">Name</label> <br>
+                            <input class="input-champ" type="text" placeholder="Tap here your name">
+                        </div>
+                        <div class="label-input">
+                            <label for="">Last name</label> <br>
+                            <input class="input-champ" type="text" placeholder="Tap here your last name">
+                        </div>
+                        <div class="label-input">
+                            <label for="">Birthday</label> <br>
+                            <input class="input-champ" type="date" placeholder="Tap here your birthday">
+                        </div>
+                        <div class="label-input" id="label-input-gender">
+                            <label for="">Gender</label> <br>
+                            <div>
+                                <input type="radio" name="gender" value="male" checked> Male<br>
+                                <input type="radio" name="gender" value="female"> Female<br>
+                                <input type="radio" name="gender" value="other"> Other
+                            </div>
+                        </div>
+                        <div class="label-input">
+                            <label for="">Job</label> <br>
+                            <input class="input-champ" type="text" placeholder="Tap here your actual work">
+                        </div>
+                        <div class="label-input">
+                            <label for="">Company</label> <br>
+                            <input class="input-champ" type="text" placeholder="Tap here your company">
+                        </div>
+                        <div class="label-input">
+                            <label for="">Contact</label> <br>
+                            <input class="input-champ" type="tel" placeholder="Tap here your phone number">
+                        </div>
+                        <div class="label-input">
+                            <label for="">E-mail</label> <br>
+                            <input class="input-champ" id="input-champ-mail" type="email" placeholder="Tap here your mail">
+                        </div>
+                    </aside>
+                    <label id="question-label" for="">Why you want to join us?</label> <br>
+                    <input type="text" id="question-input"> <br>
+                    <button type="submit">Send</button>
+                    <button type="reset">Reset</button>
+                </form>
             </article>
         </section>
 
@@ -117,9 +174,9 @@
             </div>
             <div class="account">
                 <figure>
-                    <a href=""><img src="asset/icon/facebook.png" alt=""></a>
-                    <a href=""><img src="asset/icon/twitter.png" alt=""></a>
-                    <a href=""><img src="asset/icon/linkedin.png" alt=""></a>
+                    <a href="https://facebook.com"><img src="asset/icon/facebook.png" alt=""></a>
+                    <a href="https://twitter.com"><img src="asset/icon/twitter.png" alt=""></a>
+                    <a href="https://www.linkedin.com"><img src="asset/icon/linkedin.png" alt=""></a>
                 </figure>
             </div>
         </nav>
