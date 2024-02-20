@@ -754,6 +754,7 @@ This is the main style
     border-radius: 0.5vh;
     border: 1px solid white;
     background-color: transparent;
+    padding: 2vh;
 }
 .form-join-us form button{
     width: 15vw;
@@ -839,7 +840,8 @@ This is the main style
     line-height: 1.5;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2vh;
-   
+    overflow-y: scroll;
+    overflow-x : hidden;
 }
 .client-rate{
     width: 20%;
@@ -1060,7 +1062,7 @@ footer nav{
     */
     #main-about-us{
         width: 100%;
-        height: 360vh;
+        height: 480vh;
         margin-bottom: 10vh;
     }
     #about-us-intro{
@@ -1071,7 +1073,7 @@ footer nav{
     #main-about-us .about-us{
         display: flex;
         flex-direction: column;
-        height: 100%;
+        height: 340vh;
     }
     #main-about-us .about-us article{
         margin-left: 5%;
@@ -1080,12 +1082,10 @@ footer nav{
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 1px solid white;
     }
     #main-about-us .about-us article aside{
         width: 80vw;
         height: 100vh;
-        border: 1px solid white;
     }
     #aside-right-block{
         margin-top: 4vh;
@@ -1094,12 +1094,12 @@ footer nav{
         width: 100%;
     }
     .form-join-us{
-        width: 40vw;
-        height: 150vh !important;
+        width: 90vw !important;
+        height: 190vh !important;
         border: 1px solid var(--color-yellow-orange);
     }
     .form-join-us form aside{
-        width: 100%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1126,6 +1126,7 @@ footer nav{
     }
     .form-join-us form button{
         width: 40%;
+        margin-bottom: 2vh;
     }
     /*
     ===================================End about us==========================
@@ -1133,6 +1134,28 @@ footer nav{
      /*
     ===================================Start booking==========================
     */
+    .section-booking{
+        width: 100%;
+        height: 120vh;
+        margin-top: 10vh;
+    }
+    .client-message{
+        height: 30vh;
+    }
+    .client-profil-name{
+        width: 100%;
+    }
+    .client-text-rate{
+        display: flex;
+        flex-direction: column;
+    }
+    .client-txt{
+        width: 100%;
+        overflow-y: scroll;
+    }
+    .client-rate{
+        width: 100%;
+    }
     /*
     ===================================End booking=============================
     */
