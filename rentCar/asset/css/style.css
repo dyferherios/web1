@@ -7,8 +7,7 @@
 
 :root{
     --color-black : rgb(2, 2, 2);
-    --color-yellow : yellow;
-    --color-yellow-orange : rgb(251, 128, 6);
+    --color-yellow-orange : rgb(251, 108, 6);
     --color-white : white;
     --color-grey : rgb(45, 42, 42);
 }
@@ -235,6 +234,7 @@ This is the main style
     width: 100%;
     border-radius: 50%;
     height: 100%;
+    object-fit: contain;
 }
 .div-advantage h2{
     margin: 5vh 0vh;
@@ -358,21 +358,21 @@ This is the main style
 */
 #main-cars{
     width: 100%;
-    height: 240vh;
+    height: 280vh;
+    margin-bottom: 10vh;
 }
 .section-cars{
-    margin-top: 12.5vh;
     width: 100%;
-    height: 220vh;
-
+    height: 280vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .carousel {
+    margin-top: 12.5vh;
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     overflow: hidden;
     position: relative;
 }
@@ -380,12 +380,12 @@ This is the main style
 .carousel figure{
     display: flex;
     width: 100%;
-    height: 50vw;
+    height: 50vh;
     animation: carouselAnimation 5s alternate infinite; 
 }
 
 .carousel figure img {
-    width: 100%;
+    margin-top: -10vh;
     height: auto;
 }
 
@@ -418,25 +418,34 @@ This is the main style
 }
 .form-reservation{
     width: 30%;
-    height: 60vh;
+    height: 80vh;
     border: 1px solid var(--color-yellow-orange);
     position: sticky;
-    top: 12.5vh;
+    top: 13vh;
     border-radius: 2vh;
+    align-items: center;
+}
+.form-reservation h1{
+    margin-left: 4vw;
+    font-size: 4vh;
+}
+.form-reservation h1 span{
+    color: var(--color-yellow-orange);
+    font-size: 4vh;
 }
 .form-reservation form {
     padding: 0vh 0vh 0vh 2vh;
 }
 .form-reservation form div{
-    margin: 2vh 0vh;
+    margin: 4vh 0vh;
     width: 90%;
-    height: 8vh;
+    height:10vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 .form-reservation form div input{
-    height: 4vh;
+    height: 6vh;
     border: 1px solid white;
     border-radius: 0.5vh;
     background-color: transparent;
@@ -460,19 +469,131 @@ This is the main style
 }
 .car-description{
     width: 65%;
-    height: 160vh;
-    border: 1px solid white;
+    height: 200vh;
+    display: grid;
+    grid-template-columns: auto auto;
 }
-.its-car{
+
+.its-car {
+    margin-bottom: 2vh;
+    width: 90%;
+    height: 45vh;
+    background-color: rgba(239, 130, 28, 0.5);
+    position: relative; 
+    overflow: hidden; 
+    border-radius: 2vh;
+}
+
+.drivers-info {
     width: 100%;
-    height: 20vh;
-    border: 1px solid rgb(222, 20, 20);
+    height: 100%;
+    position: absolute; 
+    background-color: rgba(239, 130, 28, 0.5);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition:  2s ease;
 }
-.its-car figure img{
-    width: 40%;
+.its-car:hover .drivers-info {
+    opacity: 1; 
+    border-radius: 2vh;
+    border: 1px solid var(--color-yellow-orange);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.its-car:hover  .its-car-information{
+    display: none;
+}
+.driver-profil{
+    width: 20vh;
+    height: 20vh;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50vh;
+    margin-left: 15vh;
+}
+.driver-profil figure img{
+    border-radius: 50vh;
+}
+
+.driver-description{
+    width: 90%;
+    height: 50%;
+    background-color: var(--color-grey);
+    margin-left: 3vh;
+    line-height: 1.5;
+    padding: 2vh;
+}
+.driver-description label{
+   color: var(--color-yellow-orange);
+}
+#reservation-btn{
+    background-color: var(--color-yellow-orange);
+    width: 10vw;
+    height: 5vh;
+    border-radius: 1vh;
+    border: none;
+    margin-top: 2vh;
+}
+#reservation-btn a{
+    text-decoration: none;
+    color: white;
+    font-size: 3vh;
+}
+.its-car figure img {
+    width: 100%;
     height: 20vh;
     object-fit: contain;
 }
+
+.its-car-information {
+    margin-left: 5%;
+    width: 90%;
+    height: 23vh; 
+}
+.its-car-information {
+    text-align: center;
+}
+.its-car-information h1{
+    margin-top: -2vh;
+    font-size: 4vh;
+    color: var(--color-white);
+}
+.its-car-information-in {
+    width: 100%;
+    height: 80%; 
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(5, 5, 5, 0.5);
+    margin-top: 2vh;
+}
+.its-car-information-in  .option, .price{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 2vh;
+    text-align: left;
+    color: var(--color-white);
+    margin-left: 2vh;
+}
+.its-car-information-in  .option{
+    width: 40%;
+}
+.its-car-information-in  .price{
+    width: 60%;
+}
+.its-car-information-in  div h3{
+    font-weight: 1;
+}
+.its-car-information-in  div span{
+    font-size: 4vh;
+    color: var(--color-yellow-orange);
+    opacity: 2;
+    font-weight: 1;
+}
+
+
 /*
 ==========================End section cars===================================
 */
