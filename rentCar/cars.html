@@ -63,21 +63,25 @@
                  <div class="form-reservation" id="form-reservation">
                     <form action="">
                         <h1><span>Make</span> a reservation</h1>
-                        <div>
-                            <label for="">Lieu de depart</label>
+                        <div class="label-input-reservation">
+                            <label for="">Car name</label>
                             <input type="text">
                         </div>
-                        <div>
-                            <label for="">Lieu d'arrivé</label>
-                            <input type="text">
+                        <div class="label-input-reservation">
+                            <label for="">Duration</label>
+                            <div class="input-duration">
+                                <input type="radio" name="duration" value="daily" > Daily
+                                <input type="radio" name="duration" value="weeckly"> Weeckly 
+                                <input type="radio" name="duration" value="monthly"> Monthly
+                            </div>
                         </div>
-                        <div>
+                        <div class="label-input-reservation">   
                             <label for="">Time</label>
                             <input type="time">
                         </div>
-                        <div>
-                            <label for="">Date</label>
-                            <input type="date">
+                        <div class="label-input-reservation">
+                            <label for="">Date and time</label>
+                            <input type="datetime-local">
                         </div>
                         <button id="btn-reserve">Send</button>
                     </form>
@@ -92,13 +96,13 @@
                             <div class="its-car-information-in">
                                 <div class="option">
                                     <h3>Daily</h3>
-                                    <h3>Weekly</h3>
+                                    <h3>Weeckly</h3>
                                     <h3>Monthly</h3>
                                 </div>
                                 <div class="price">
-                                    <h3><span>400 £ </span>/day</h3>
-                                    <h3><span>2.800 £ </span>/week</h3>
-                                    <h3><span>12.000 £ </span>/month</h3>
+                                    <h3><span>400 £ </span></h3>
+                                    <h3><span>2.800 £ </span></h3>
+                                    <h3><span>12.000 £ </span></h3>
                                 </div>
                             </div>
                         </div>
@@ -125,13 +129,13 @@
                             <div class="its-car-information-in">
                                 <div class="option">
                                     <h3>Daily</h3>
-                                    <h3>Weekly</h3>
+                                    <h3>Weeckly</h3>
                                     <h3>Monthly</h3>
                                 </div>
                                 <div class="price">
-                                    <h3><span>100 £ </span>/day</h3>
-                                    <h3><span>700 £ </span>/week</h3>
-                                    <h3><span>2.800 £ </span>/month</h3>
+                                    <h3><span>100 £ </span></h3>
+                                    <h3><span>700 £ </span></h3>
+                                    <h3><span>2.800 £ </span></h3>
                                 </div>
                             </div>
                         </div>
@@ -159,13 +163,13 @@
                             <div class="its-car-information-in">
                                 <div class="option">
                                     <h3>Daily</h3>
-                                    <h3>Weekly</h3>
+                                    <h3>Weeckly</h3>
                                     <h3>Monthly</h3>
                                 </div>
                                 <div class="price">
-                                    <h3><span>150 £ </span>/day</h3>
-                                    <h3><span>900 £ </span>/week</h3>
-                                    <h3><span>3.600 £ </span>/month</h3>
+                                    <h3><span>150 £ </span></h3>
+                                    <h3><span>900 £ </span></h3>
+                                    <h3><span>3.600 £ </span></h3>
                                 </div>
                             </div>
                         </div>
@@ -192,13 +196,13 @@
                             <div class="its-car-information-in">
                                 <div class="option">
                                     <h3>Daily</h3>
-                                    <h3>Weekly</h3>
+                                    <h3>Weeckly</h3>
                                     <h3>Monthly</h3>
                                 </div>
                                 <div class="price">
-                                    <h3><span>400 £ </span>/day</h3>
-                                    <h3><span>2.800 £ </span>/week</h3>
-                                    <h3><span>12.000 £ </span>/month</h3>
+                                    <h3><span>400 £ </span></h3>
+                                    <h3><span>2.800 £ </span></h3>
+                                    <h3><span>12.000 £ </span></h3>
                                 </div>
                             </div>
                         </div>
@@ -221,17 +225,17 @@
                             <img src="asset/image/Mercedes-Benz_Classe_S.png" alt="">
                         </figure>
                         <div class="its-car-information">
-                            <h1>Mercedez Benz S</h1>
+                            <h1>Mercedez Benz</h1>
                             <div class="its-car-information-in">
                                 <div class="option">
                                     <h3>Daily</h3>
-                                    <h3>Weekly</h3>
+                                    <h3>Weeckly</h3>
                                     <h3>Monthly</h3>
                                 </div>
                                 <div class="price">
-                                    <h3><span>600 £ </span>/day</h3>
-                                    <h3><span>2.500 £ </span>/week</h3>
-                                    <h3><span>10.000 £ </span>/month</h3>
+                                    <h3><span>600 £ </span></h3>
+                                    <h3><span>2.500 £ </span></h3>
+                                    <h3><span>10.000 £ </span></h3>
                                 </div>
                             </div>
                         </div>
@@ -258,13 +262,13 @@
                             <div class="its-car-information-in">
                                 <div class="option">
                                     <h3>Daily</h3>
-                                    <h3>Weekly</h3>
+                                    <h3>Weeckly</h3>
                                     <h3>Monthly</h3>
                                 </div>
                                 <div class="price">
-                                    <h3><span>2.000 £ </span>/day</h3>
-                                    <h3><span>12.000 £ </span>/week</h3>
-                                    <h3><span>40.000 £ </span>/month</h3>
+                                    <h3><span>2.000 £ </span></h3>
+                                    <h3><span>12.000 £ </span></h3>
+                                    <h3><span>40.000 £ </span></h3>
                                 </div>
                             </div>
                         </div>
@@ -291,13 +295,13 @@
                             <div class="its-car-information-in">
                                 <div class="option">
                                     <h3>Daily</h3>
-                                    <h3>Weekly</h3>
+                                    <h3>Weeckly</h3>
                                     <h3>Monthly</h3>
                                 </div>
                                 <div class="price">
-                                    <h3><span>250 £ </span>/day</h3>
-                                    <h3><span>1.500 £ </span>/week</h3>
-                                    <h3><span>3.000 £ </span>/month</h3>
+                                    <h3><span>250 £ </span></h3>
+                                    <h3><span>1.500 £ </span></h3>
+                                    <h3><span>3.000 £ </span></h3>
                                 </div>
                             </div>
                         </div>
@@ -324,13 +328,13 @@
                             <div class="its-car-information-in">
                                 <div class="option">
                                     <h3>Daily</h3>
-                                    <h3>Weekly</h3>
+                                    <h3>Weeckly</h3>
                                     <h3>Monthly</h3>
                                 </div>
                                 <div class="price">
-                                    <h3><span>250 £ </span>/day</h3>
-                                    <h3><span>1.500 £ </span>/week</h3>
-                                    <h3><span>30.000 £ </span>/month</h3>
+                                    <h3><span>250 £ </span></h3>
+                                    <h3><span>1.500 £ </span></h3>
+                                    <h3><span>30.000 £ </span></h3>
                                 </div>
                             </div>
                         </div>

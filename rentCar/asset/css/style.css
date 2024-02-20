@@ -436,7 +436,7 @@ This is the main style
 .form-reservation form {
     padding: 0vh 0vh 0vh 2vh;
 }
-.form-reservation form div{
+.form-reservation form .label-input-reservation{
     margin: 4vh 0vh;
     width: 90%;
     height:10vh;
@@ -444,7 +444,7 @@ This is the main style
     flex-direction: column;
     justify-content: space-around;
 }
-.form-reservation form div input{
+.form-reservation form .label-input-reservation input{
     height: 6vh;
     border: 1px solid white;
     border-radius: 0.5vh;
@@ -466,6 +466,16 @@ This is the main style
     opacity: 1;
     font-size: 3.5vh;
     transform: scale(1.2, 1.2);
+}
+.form-reservation .label-input-reservation .input-duration{
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 0.5vh;
+    border: 1px solid white;
+    align-items: center;
 }
 .car-description{
     width: 65%;
@@ -510,7 +520,7 @@ This is the main style
     height: 20vh;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 50vh;
-    margin-left: 15vh;
+    margin-left: 9vw;
 }
 .driver-profil figure img{
     border-radius: 50vh;
@@ -587,7 +597,7 @@ This is the main style
     font-weight: 1;
 }
 .its-car-information-in  div span{
-    font-size: 4vh;
+    font-size: 3vh;
     color: var(--color-yellow-orange);
     opacity: 2;
     font-weight: 1;
@@ -765,7 +775,15 @@ This is the main style
 /*
 ==========================End section about us=============================
 */
-
+/*
+===================================Start booking==========================
+*/
+.section-booking{
+    
+}
+/*
+===================================End booking=============================
+*/
 /*
 ===========================Start footer===========================
 */
@@ -842,8 +860,9 @@ footer nav{
         right: 0vh;
         width: 50%;
         height: 50vh;
-        background-color: rgba(64, 63, 63, 0.5);
+        background-color: rgba(9, 5, 0, 0.8);
         text-align: center;
+        border: 1px solid var(--color-yellow-orange);
     }
     #icon-menu img{
         display: block;
@@ -988,15 +1007,17 @@ footer nav{
     }
     #main-about-us .about-us article{
         margin-left: 5%;
-        width: 90vw;
+        width: 95vw;
         height: 180vh;
         display: flex;
         flex-direction: column;
         align-items: center;
+        border: 1px solid white;
     }
     #main-about-us .about-us article aside{
         width: 80vw;
         height: 100vh;
+        border: 1px solid white;
     }
     #aside-right-block{
         margin-top: 4vh;
@@ -1041,7 +1062,65 @@ footer nav{
     /*
     ===================================End about us==========================
     */
-    
+     /*
+    ===================================Start booking==========================
+    */
+    /*
+    ===================================End booking=============================
+    */
+    /*
+    ===================================Start car=============================
+    */
+    #main-cars{
+        width: 100vw;
+        height: 600vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .section-cars{
+        width: 100%;
+        height: 600vh;
+        display: inherit;
+    }
+    .section-cars .all-cars{
+        display: inline;
+        justify-content: space-around;
+        height: 540vh;
+        width: 90%;
+    }
+   .form-reservation{
+        width: 100%;
+        height: 80vh;
+        border: 1px solid rgb(245, 144, 3);     
+        position: inherit;
+        margin-bottom: 10vh;
+    }
+    #btn-reserve{
+        width: 40vw;
+        margin-left: 24vw;
+    }
+    .car-description{
+        width: 100%;
+        height: 410vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-left: 3vh;
+    }
+    #reservation-btn{
+        width: 40vw;
+    }
+    .driver-description{
+        margin-left: 1.5vh;
+    }
+    .driver-profil{
+        margin-left: 7vh;
+    }
+
+    /*
+    ===================================End car=============================
+    */
     /*
     ==================================Start footer===========================
     */
