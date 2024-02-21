@@ -16,6 +16,7 @@ body{
     color: white;
     background-color: var(--color-black);
     width: 100%;
+    height: auto;
 } 
 /*
 This is the header style
@@ -69,6 +70,17 @@ header nav{
 #home-menu{
     padding: 0.5vh 0vh 2vh 0vh;
     margin-top: -0.5vh;
+    border-bottom: 2px solid var(--color-yellow-orange);
+}
+#car-menu{
+    padding: 0.5vh 0vh 2vh 0vh;
+    margin-top: -0.5vh;
+    border-bottom: 2px solid var(--color-yellow-orange);
+}
+#about-menu{
+    padding: 0.5vh 0vh 2vh 0vh;
+    margin-top: -0.5vh;
+    border-bottom: 2px solid var(--color-yellow-orange);
 }
 .list-menu{
     animation: 2s;
@@ -358,12 +370,12 @@ This is the main style
 */
 #main-cars{
     width: 100%;
-    height: 280vh;
+    height: 270vh;
     margin-bottom: 10vh;
 }
 .section-cars{
     width: 100%;
-    height: 280vh;
+    height: 270vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -372,7 +384,7 @@ This is the main style
 .carousel {
     margin-top: 10vh;
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     overflow: hidden;
     position: relative;
 }
@@ -417,7 +429,7 @@ This is the main style
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    
 }
 .form-reservation{
     width: 30%;
@@ -485,10 +497,10 @@ This is the main style
     height: 200vh;
     display: grid;
     grid-template-columns: auto auto;
+    padding-left: 5vh ;
 }
 
 .its-car {
-    margin-bottom: 2vh;
     width: 90%;
     height: 45vh;
     background-color: rgba(239, 130, 28, 0.5);
@@ -521,18 +533,18 @@ This is the main style
 .driver-profil{
     width: 20vh;
     height: 20vh;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 50vh;
+    border: 1px solid var(--color-yellow-orange);
+    border-radius: 50%;
     margin-left: 9vw;
 }
 .driver-profil figure img{
-    border-radius: 50vh;
+    border-radius: 50%;
 }
 
 .driver-description{
     width: 90%;
     height: 50%;
-    background-color: var(--color-grey);
+    background-color: rgba(0, 0, 0, 0.7);
     margin-left: 3vh;
     line-height: 1.5;
     padding: 2vh;
@@ -547,6 +559,7 @@ This is the main style
     border-radius: 1vh;
     border: none;
     margin-top: 2vh;
+    margin-left: 10vh;
 }
 #reservation-btn a{
     text-decoration: none;
@@ -595,6 +608,8 @@ This is the main style
 }
 .its-car-information-in  .price{
     width: 60%;
+    text-align: right;
+    padding-right: 2vh;
 }
 .its-car-information-in  div h3{
     font-weight: 1;
@@ -622,24 +637,48 @@ This is the main style
 #main-about-us .about-us{
     margin-top: 60vh;
     width: 100%;
-    height: 120vh;
+    height: 140vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-#about-us-intro{
+#about-us-intro{ 
     position: absolute;
-    margin-top: -40vh;
+    margin-top: -45vh;
     width: 90%;
-    height: 40vh;
-    border: 1px solid white;
+    height: 50vh;
     line-height: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-#about-us-intro h1{
+#about-us-intro #text{
+    width: 50%;
+}
+#about-us-intro #text h1{
+    position: sticky;
+    top: 0;
     color: var(--color-yellow-orange);
+    background-color: rgba(0, 0, 0);
+    width: 50%;
 }
+#about-us-intro #our-team{
+    width: 40%;
+    margin-top: 5vh;
+    height: 100%;
+}
+#about-us-intro #our-team figure{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#about-us-intro #our-team figure img{
+    width: 100%;
+    height: 100%;
+}
+
 #main-about-us article{
-    margin-top: 10vh;
+    margin-top: 20vh;
     width: 45vw;
     height: 100vh;
     display: flex;
@@ -648,7 +687,7 @@ This is the main style
 }
 #main-about-us article .block-porfil{
     width: 20vw;
-    height: 95vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -657,7 +696,7 @@ This is the main style
 #main-about-us article .block-porfil .div-profil{
     width: 20vw;
     height: 48%;
-    background-color: var(--color-yellow-orange);
+    background-color: rgba(255, 123, 0, 0.7);
     border-radius: 2vh; 
 }
 
@@ -681,8 +720,44 @@ This is the main style
 .profil-description h1{
     margin: 1vh 0 1vh 0;
 }
+.profil-description {
+    position: relative;
+}
+.profil-description .reseau-sociaux figure{
+   width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5vh;
+}
+.profil-description .reseau-sociaux figure img{
+    width: 5vh;
+    height: 5vh;
+}
+.profil-description .reseau-sociaux {
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    top: 30%;
+    opacity: 0;
+    transition: top 0.5s ease, opacity 1s ease; 
+    z-index: 1; 
+}
+
+.profil-description:hover .reseau-sociaux {
+    top: 2vh;
+    opacity: 1; 
+    border-radius: 2vh;
+}
+.profil-description:hover h1, .profil-description:hover p {
+   display: none;
+}
+
+
+
 .form-join-us{
-    border: 1px solid rgb(245, 144, 3); 
+    border: 1px solid var(--color-yellow-orange); 
     border-radius: 2vh;
 }
 .form-join-us h1{
@@ -836,7 +911,7 @@ This is the main style
 
 .client-txt::-webkit-scrollbar-track {
     background-color: var(--color-black); 
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid var(--color-white);
 }
 
 
@@ -856,7 +931,7 @@ This is the main style
 */
 footer{
     width: 100%;
-    height: 20vh;
+    height: 20vh;    
 }
 footer nav{
     display: flex;
@@ -913,10 +988,11 @@ footer nav{
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .nav-menu{
         width: 10%;
+        margin-right: 2vh;
     }
     .logo-name{
         width: 60%;
@@ -924,7 +1000,7 @@ footer nav{
     .list-menu {
         display: none;
         position: absolute;
-        right: 0vh;
+        right: 2vh;
         width: 50%;
         height: 50vh;
         background-color: rgba(9, 5, 0, 0.8);
@@ -933,12 +1009,10 @@ footer nav{
     }
     #icon-menu img{
         display: block;
-    }
-    #icon-menu img {
         width: 4vh; 
         height: 4vh;
     }
-
+  
     #icon-menu:hover .list-menu {
         display: block;
         display: flex;
@@ -953,6 +1027,7 @@ footer nav{
     }
     #contact-menu, #home-menu  {
         position: relative;
+        border-bottom: 2px solid var(--color-yellow-orange);
     }
     
     #contact-menu::before, #home-menu::before {
@@ -977,7 +1052,7 @@ footer nav{
     */
     #main-home{
         width: 100%;
-        height: 400vh;
+        height: 380vh;
     }
     #section-home{
         padding: 0;
@@ -1060,18 +1135,32 @@ footer nav{
     */
     #main-about-us{
         width: 100vw;
-        height: 520vh;
+        height: 540vh;
         margin-bottom: 10vh;
     }
-    #about-us-intro{
+    .about-us #about-us-intro{
+        width: 90%;
         top: 60vh;
         font-size: 2vh;
         margin-left: 5%;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+    }
+    .about-us #about-us-intro #text{
+        width: 100%;
+    }
+    .about-us #about-us-intro #text h1{
+        width: 100%;
+        top: -1vh;
+    }
+    #our-team figure img{
+        display: none;
     }
     #main-about-us .about-us{
         display: flex;
         flex-direction: column;
-        height: 380vh;
+        height: 400vh;
         width: 100vw;
     }
     #main-about-us .about-us article{
@@ -1081,7 +1170,7 @@ footer nav{
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 1px solid rgb(148, 46, 46);
+        margin-top: 5vh;
     }
     
     #main-about-us .about-us article aside{
@@ -1093,7 +1182,7 @@ footer nav{
     }
     .div-profil .profil-description{    
         width:80vw;
-        border: 1px solid rgb(182, 68, 68);
+        /* border: 1px solid rgb(182, 68, 68); */
     }
     #main-about-us article .block-porfil .div-profil{
         width: 80vw;
@@ -1172,14 +1261,23 @@ footer nav{
     */
     #main-cars{
         width: 100vw;
-        height: 600vh;
+        height: 560vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
     .carousel{
-        height: 30vh;
+        height: 35vh;
         margin-top: -10vh;
+    }
+    @keyframes carouselAnimation {
+        0% {
+            transform: translateX(0%);
+        }
+       
+        100% {
+            transform: translateX(-200%);
+        }
     }
     .section-cars{
         width: 100%;
@@ -1189,14 +1287,13 @@ footer nav{
     .section-cars .all-cars{
         display: inline;
         justify-content: space-around;
-        height: 540vh;
+        height: 500vh;
         width: 100%;
-       
     }
    .form-reservation{
         width: 90vw;
         height: 80vh;
-        border: 1px solid rgb(245, 144, 3);     
+        border: 1px solid var(--color-yellow-orange);     
         position: inherit;
         margin-bottom: 10vh;
         margin-left: 5vw;
@@ -1224,7 +1321,7 @@ footer nav{
         margin-left: 1.5vh;
     }
     .driver-profil{
-        margin-left: 7vh;
+        margin-left: 9vh;
     }
 
     /*
@@ -1235,7 +1332,7 @@ footer nav{
     */
     footer {
         width: 80vw;
-        height: 40vh;
+        height: 20vh;
         margin-left: 10vw;
     }
     footer nav{
@@ -1264,12 +1361,13 @@ footer nav{
     footer nav .account {
        width: 60%;
        padding-top: 2vh;
-       margin-top: 5vh;
+       margin: 5vh 0vh;
     }
     footer nav .account figure{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+
     }
 
     /*
