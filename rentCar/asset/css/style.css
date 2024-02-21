@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 :root{
@@ -16,7 +18,7 @@ body{
     color: white;
     background-color: var(--color-black);
     width: 100%;
-    height: auto;
+    height: auto;  
 } 
 
 /*
@@ -418,7 +420,7 @@ This is the main style
 
 
 .section-cars h1{
-    margin: 5vh 0vh 0vh 5vh;
+    text-align: center;
     font-size: 5vh;
     color: var(--color-yellow-orange);
 }
@@ -522,14 +524,16 @@ This is the main style
     left: 0;
     opacity: 0;
     transition:  2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 .its-car:hover .drivers-info {
     opacity: 1; 
     border-radius: 2vh;
     border: 1px solid var(--color-yellow-orange);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    
 }
 .its-car:hover  .its-car-information{
     display: none;
@@ -539,7 +543,7 @@ This is the main style
     height: 20vh;
     border: 1px solid var(--color-yellow-orange);
     border-radius: 50%;
-    margin-left: 9vw;
+    align-items: center;
 }
 .driver-profil figure img{
     border-radius: 50%;
@@ -563,7 +567,8 @@ This is the main style
     border-radius: 1vh;
     border: none;
     margin-top: 2vh;
-    margin-left: 10vh;
+    /* margin-left: 10vh; */
+    align-items: center;
 }
 #reservation-btn a{
     text-decoration: none;
@@ -678,7 +683,6 @@ This is the main style
 #about-us-intro #text p{
     height: 100%;
 }
-
 #about-us-intro #our-team{
     width: 40%;
     height: 100%;
@@ -1327,6 +1331,7 @@ footer nav{
     #btn-reserve{
         width: 40vw;
         margin-left: 24vw;
+        
     }
     .car-description{
         width: 100%;
@@ -1346,9 +1351,9 @@ footer nav{
     .driver-description{
         margin-left: 1.5vh;
     }
-    .driver-profil{
+    /* .driver-profil{
         margin-left: 9vh;
-    }
+    } */
 
     /*
     ===================================End car=============================
