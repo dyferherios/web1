@@ -18,6 +18,7 @@ body{
     width: 100%;
     height: auto;
 } 
+
 /*
 This is the header style
 ====================start header style=======================================
@@ -208,6 +209,7 @@ This is the main style
 }
 #section-advantage h1{
     font-size: 5vh;
+    color: var(--color-yellow-orange);
 }
 #section-advantage article{
     margin-top: 10vh;
@@ -381,6 +383,7 @@ This is the main style
     justify-content: center;
     align-items: center;
 }
+
 .carousel {
     margin-top: 10vh;
     width: 100%;
@@ -417,6 +420,7 @@ This is the main style
 .section-cars h1{
     margin: 5vh 0vh 0vh 5vh;
     font-size: 5vh;
+    color: var(--color-yellow-orange);
 }
 
 .section-cars p{
@@ -858,7 +862,8 @@ This is the main style
 .section-booking h1{
     margin-top: -5vh;
     margin-bottom: 5vh;
-    font-size: 4vh;
+    text-align: center;
+    font-size: 5vh;
     color: var(--color-yellow-orange);
 }
 .client-message{
